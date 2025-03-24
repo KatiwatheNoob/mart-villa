@@ -1,75 +1,96 @@
-import { BiBed, BiMap, BiMapAlt, BiTab } from "react-icons/bi";
+import { useState, useEffect } from "react";
+import { BiMap } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import CardHoverIcons from "./CardHoverIcons";
 import CardLabels from "./CardLabels";
 
-const SingleProductCard = ({
+const SingleProductCardFullWidth = ({
   name,
   location,
   price,
-  distance,
-  purpose,
-  number_of_beds,
-  number_of_bathrooms,
-  dimensions,
   image,
-  basis,
+  description,
+  textLength,
+  showLabels,
+  purpose,
+  distance,
 }) => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate data loading
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  }, []);
+
   return (
-    <div
-      className={`flex-1 ${
-        basis ? basis : "basis-[18rem]"
-      } shadow-light dark:border-card-dark border rounded-lg overflow-hidden relative group`}
-    >
-      <div className="group !opacity-100 overflow-hidden relative">
-        <Link to="/" className="!opacity-100">
-          <img
-            src={image}
-            alt={name}
-            className="w-full  h-fit md:h-[250px] object-cover group-hover:scale-125 transition-a"
-          />
-        </Link>
-        <CardHoverIcons />
-        <div className="absolute bottom-0 left-0 w-full px-2 py-2 transition-transform bg-gradient-to-t from-black/80 sm:translate-y-10 group-hover:translate-y-0 to-transparent">
-          <div className="text-white flex-align-center gap-x-2">
-            <BiMap />
-            <p>{location}</p>
-          </div>
+    <div className="relative grid grid-cols-1 gap-4 mt-5 overflow-hidden border rounded-2xl shadow-lg sm:grid-cols-2 md:grid-cols-3 dark:border-card-dark group min-h-[300px]">
+      {/* Image Section */}
+      <div className="sm:col-span-1 h-full">
+        <div className="group !opacity-100 overflow-hidden relative h-full">
+          {loading ? (
+            <div className="w-full h-full bg-gray-300 dark:bg-gray-700 animate-pulse rounded-lg" />
+          ) : (
+            <Link to="/" className="!opacity-100">
+              <img
+                src={image}
+                alt={name}
+                className="object-cover w-full h-full group-hover:scale-110 transition-all duration-300"
+              />
+            </Link>
+          )}
+          {!loading && <CardHoverIcons />}
         </div>
+        {!showLabels && !loading && <CardLabels purpose={purpose} distance={distance} />}
       </div>
-      <CardLabels purpose={purpose} distance={distance} />
-      <div className="p-3">
-        <Link to="/" className="group-hover:text-primary transition-a">
-          <h1 className="text-lg font-bold capitalize">{name}</h1>
-        </Link>
-        <div className="flex justify-between mt-3">
-          <div className="flex-align-center gap-x-2">
-            <div className="icon-box !w-7 !h-7 bg-primary/20 hover:!bg-primary/40 text-primary">
-              <BiBed />
-            </div>
-            <p className="text-sm">{number_of_beds} Beds</p>
-          </div>
-          <div className="flex-align-center gap-x-2">
-            <div className="icon-box !w-7 !h-7 bg-primary/20 hover:!bg-primary/40 text-primary">
-              <BiTab />
-            </div>
-            <p className="text-sm">{number_of_bathrooms} Bathrooms</p>
-          </div>
-          <div className="flex-align-center gap-x-2">
-            <div className="icon-box !w-7 !h-7 bg-primary/20 hover:!bg-primary/40 text-primary">
-              <BiMapAlt />
-            </div>
-            <p className="text-sm">{dimensions}</p>
-          </div>
+
+      {/* Content Section */}
+      <div className="sm:col-span-1 md:col-span-2 p-6">
+        {loading ? (
+          <div className="w-3/4 h-6 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md" />
+        ) : (
+          <Link to="/" className="group-hover:text-primary transition-all">
+            <h1 className="text-xl font-bold capitalize">{name}</h1>
+          </Link>
+        )}
+
+        <div className="mt-2 flex items-center gap-2 text-gray-700 dark:text-gray-300">
+          <BiMap size={18} />
+          {loading ? (
+            <div className="w-1/2 h-4 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md" />
+          ) : (
+            <p className="text-sm">{location}</p>
+          )}
         </div>
 
-        <div className="mt-4 flex-center-between">
-          <h1 className="text-lg font-semibold text-primary">${price}</h1>
-          <button className="btn btn-secondary">details</button>
+        {loading ? (
+          <div className="mt-2 h-12 w-full bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md" />
+        ) : (
+          <p className="mt-2 text-gray-600 dark:text-gray-400">
+            {`${description.slice(0, textLength || 250)}...`}
+          </p>
+        )}
+
+        {/* Price and Button */}
+        <div className="mt-5 flex justify-between items-center">
+          {loading ? (
+            <div className="w-20 h-6 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md" />
+          ) : (
+            <h1 className="text-xl font-semibold text-primary">Ksh {price}</h1>
+          )}
+
+          {loading ? (
+            <div className="w-24 h-10 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md" />
+          ) : (
+            <Link to={`/property/${name.replace(/\s+/g, "-").toLowerCase()}`} className="btn btn-secondary px-5 py-2 text-lg">
+              Details
+            </Link>
+          )}
         </div>
       </div>
     </div>
   );
 };
 
-export default SingleProductCard;
+export default SingleProductCardFullWidth;

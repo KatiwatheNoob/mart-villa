@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BiBed, BiMap, BiMapAlt, BiTab } from "react-icons/bi";
+import { BiMap } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import CardHoverIcons from "./CardHoverIcons";
 import CardLabels from "./CardLabels";
@@ -8,15 +8,12 @@ const SingleProductCardFullWidth = ({
   name,
   location,
   price,
-  distance,
-  purpose,
-  number_of_beds,
-  number_of_bathrooms,
-  dimensions,
   image,
   description,
   textLength,
   showLabels,
+  purpose,
+  distance,
 }) => {
   const [loading, setLoading] = useState(true);
 
@@ -75,41 +72,21 @@ const SingleProductCardFullWidth = ({
           </p>
         )}
 
-        {/* Property Details */}
-        <div className="flex justify-between mt-4">
-          {[BiBed, BiTab, BiMapAlt].map((Icon, index) => (
-            <div key={index} className="flex items-center gap-2">
-              <div className="icon-box !w-9 !h-9 bg-primary/20 hover:!bg-primary/40 text-primary">
-                <Icon size={20} />
-              </div>
-              {loading ? (
-                <div className="w-12 h-4 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md" />
-              ) : (
-                <p className="text-md">
-                  {index === 0 ? `${number_of_beds} Beds` : index === 1 ? `${number_of_bathrooms} Bathrooms` : dimensions}
-                </p>
-              )}
-            </div>
-          ))}
-        </div>
-
         {/* Price and Button */}
         <div className="mt-5 flex justify-between items-center">
           {loading ? (
             <div className="w-20 h-6 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md" />
           ) : (
             <h1 className="text-xl font-semibold text-primary">Ksh {price}</h1>
-            
           )}
 
-        {loading ? (
-          <div className="w-24 h-10 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md" />
-        ) : (
-          <Link to={`/property/${name.replace(/\s+/g, "-").toLowerCase()}`} className="btn btn-secondary px-5 py-2 text-lg">
-            Details
-          </Link>
-        )}
-
+          {loading ? (
+            <div className="w-24 h-10 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md" />
+          ) : (
+            <Link to={`/property/${name.replace(/\s+/g, "-").toLowerCase()}`} className="btn btn-secondary px-5 py-2 text-lg">
+              Details
+            </Link>
+          )}
         </div>
       </div>
     </div>

@@ -5,7 +5,6 @@ export { default as Categories } from "./Categories";
 export { default as Counter } from "./Counter";
 export { default as CTA } from "./CTA";
 export { default as Featured } from "./Featured";
-export { default as Feeds } from "./Feeds";
 export { default as Pagination } from "./Pagination";
 export { default as PopularTags } from "./PopularTags";
 export { default as Projects } from "./Projects";
