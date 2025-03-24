@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 import { BiBuildingHouse } from "react-icons/bi";
-import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaTiktok, FaTwitter } from "react-icons/fa";
 import { FiFacebook } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
@@ -13,92 +13,62 @@ const Footer = () => {
           <div className="flex-1 basis-[10rem]">
             <Link to="/" className="flex-shrink-0 flex-align-center gap-x-1">
               <BiBuildingHouse className="text-3xl text-primary" />
-              <h1 className="hidden md:block">MartVilla</h1>
+              <h1 className="hidden md:block">Hindsight Ventures</h1>
             </Link>
             <div className="mt-3">
               <p className="text-sm">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
-                harum explicabo illo, magnam vitae expedita.
+              Navigating the Future of Land Ownership
               </p>
+              
               <div className="gap-5 my-6 flex-center-center">
+              <a href="https://web.facebook.com/profile.php?id=61560415778408" target="_blank" rel="noopener noreferrer">
                 <div className="icon-box bg-dark-light hover:bg-hover-color-dark">
                   <FiFacebook />
                 </div>
+                </a>
+                
 
+                <a href="https://x.com/hindsight_hq?s=21" target="_blank" rel="noopener noreferrer">
                 <div className="icon-box bg-dark-light hover:bg-hover-color-dark">
                   <FaTwitter />
                 </div>
+                </a>
 
+                <a href="https://www.instagram.com/hindsight_ventureske?igsh=MWppYjN0NTNpY3Jsaw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
                 <div className="icon-box bg-dark-light hover:bg-hover-color-dark">
                   <FaInstagram />
                 </div>
+                </a>
 
+                <a href="https://www.tiktok.com/@hindsightventures?_t=8qMmmooPCiM&_r=1" target="_blank" rel="noopener noreferrer">
                 <div className="icon-box bg-dark-light hover:bg-hover-color-dark">
-                  <FaLinkedin />
+                  <FaTiktok />
                 </div>
+              </a>
+
               </div>
             </div>
           </div>
 
           <div className="flex-1 basis-[10rem]">
-            <h2 className="text-xl font-semibold">Services</h2>
-            <ul>
-              <li className="my-3 text-muted">
-                <a href="#"> Order Tracking</a>
-              </li>
-              <li className="my-3 text-muted">
-                <a href="#">Whislist</a>
-              </li>
-              <li className="my-3 text-muted">
-                <a href="#">Terms of use</a>
-              </li>
-              <li className="my-3 text-muted">
-                <a href="#">Contact support</a>
-              </li>
-              <li className="my-3 text-muted">
-                <a href="#">2 year guarantee</a>
-              </li>
-            </ul>
-          </div>
+          <h2 className="text-xl font-semibold">Quick Links</h2>
+          <ul className="flex gap-6 mt-3">
+            <li className="text-muted">
+              <a href="#">About Us</a>
+            </li>
+            <li className="text-muted">
+              <a href="#">Services</a>
+            </li>
+            <li className="text-muted">
+              <a href="#">Blog</a>
+            </li>
+            <li className="text-muted">
+              <a href="#">Portfolio</a>
+            </li>
+          </ul>
+        </div>
 
-          <div className="flex-1 basis-[10rem]">
-            <h2 className="text-xl font-semibold">Quick Links</h2>
-            <ul>
-              <li className="my-3 text-muted">
-                <a href="#"> About Us</a>
-              </li>
-              <li className="my-3 text-muted">
-                <a href="#">Services</a>
-              </li>
-              <li className="my-3 text-muted">
-                <a href="#">Blog</a>
-              </li>
-              <li className="my-3 text-muted">
-                <a href="#">Portifolio</a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex-1 basis-[10rem]">
-            <h2 className="text-xl font-semibold">Business</h2>
-            <ul>
-              <li className="my-3 text-muted">
-                <a href="#"> Success</a>
-              </li>
-              <li className="my-3 text-muted">
-                <a href="#">Guide</a>
-              </li>
-              <li className="my-3 text-muted">
-                <a href="#">Mission</a>
-              </li>
-              <li className="my-3 text-muted">
-                <a href="#">Terms & Conditions</a>
-              </li>
-              <li className="my-3 text-muted">
-                <a href="#">Pricacy Policy</a>
-              </li>
-            </ul>
-          </div>
+          
 
           <div className="flex-1 basis-[10rem] text-center md:text-left">
             <h2 className="text-xl font-semibold">
@@ -120,11 +90,11 @@ const Footer = () => {
         </div>
       </footer>
       <div className="py-2 mt-3 text-center border-t text-muted border-dark">
-        <p>
-          Created By <span className="text-primary">Kisakye Martha</span> | All
-          Rights Reserved
-        </p>
-      </div>
+  <p>
+    &copy; {new Date().getFullYear()} All Rights Reserved.
+  </p>
+</div>
+
     </div>
   );
 };

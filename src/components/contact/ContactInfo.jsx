@@ -1,35 +1,52 @@
-import { BiMap } from "react-icons/bi";
-import { FiMail, FiPhone } from "react-icons/fi";
+"use client";
+import { motion } from "framer-motion";
 
-const ContactInfo = () => {
+const containerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+
+const Stats = () => {
   return (
-    <div className="grid grid-cols-1 gap-6 py-16 sm:grid-cols-2 md:grid-cols-3">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+      className="pt-10 pb-16"
+    >
+      {/* Header Section */}
       <div className="text-center">
-        <div className="icon-box !h-14 !w-14 !bg-primary text-white mx-auto text-2xl">
-          <FiPhone />
-        </div>
-        <h1 className="mt-2 text-lg font-semibold">Phone Number</h1>
-        <p>+256 478 832902</p>
-        <p>+256 775 358738</p>
+        <h1 className="heading">
+          Unlocking Real Estate Potential in Kwale County
+        </h1>
+        <p className="mt-4">
+          At <strong>Hindsight Ventures Limited</strong>, we specialize in
+          transforming land into valuable opportunities. With a focus on
+          development, investment, and community enhancement, we are shaping the
+          future of real estate in this coastal region.
+        </p>
       </div>
-      <div className="text-center">
-        <div className="icon-box !h-14 !w-14 !bg-primary text-white mx-auto text-2xl">
-          <FiMail />
+
+      {/* Content Section */}
+      <div className="flex flex-wrap gap-24 mt-8">
+        <div className="flex-1 basis-[22rem]">
+          <p>
+            Our expertise spans land acquisition, enhancement, and sustainable
+            development. We believe in maximizing the value of every parcel of
+            land while fostering long-term growth.
+          </p>
+          <p className="mt-3">
+            We strive to create seamless investment experiences, ensuring our
+            clients receive tailored solutions that align with their goals.
+          </p>
         </div>
-        <h1 className="mt-2 text-lg font-semibold">Email Address</h1>
-        <p>martvilla@gmail.com</p>
-        <p>wabwenib66@gmail.com</p>
       </div>
-      <div className="text-center">
-        <div className="icon-box !h-14 !w-14 !bg-primary text-white mx-auto text-2xl">
-          <BiMap />
-        </div>
-        <h1 className="mt-2 text-lg font-semibold">Office Address</h1>
-        <p>Lumumu Street Plot 3943, Kampala, Uganda</p>
-        <p>Horizon Street, Middle Avenue, USA</p>
-      </div>
-    </div>
+    </motion.div>
   );
 };
 
-export default ContactInfo;
+export default Stats;

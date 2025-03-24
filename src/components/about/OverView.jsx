@@ -1,37 +1,15 @@
-import { BiPlay } from "react-icons/bi";
-
 const OverView = () => {
   return (
     <div className="pt-20 pb-16">
-      <div className="flex flex-wrap gap-4">
-        <div className="flex-1 basis-[18rem]">
-          <h1 className="heading">what we do</h1>
-          <p className="mt-3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
-            earum, laboriosam soluta, sit natus corporis ab ullam vel voluptates
-            inventore ipsa repudiandae minus? Non, deleniti! Quos reiciendis
-            saepe voluptatem accusantium nemo praesentium reprehenderit nostrum
-            veritatis.
-          </p>
-          <button className="mt-4 btn btn-primary">read more</button>
-        </div>
-        <div className="flex-1 basis-[18rem]">
-          <div className="relative overflow-hidden rounded-lg">
-            <img
-              src="/images/property (41).png"
-              alt=""
-              className="w-full h-[300px] object-cover"
-            />
-            <div className="absolute top-0 left-0 flex-col w-full h-full bg-black/50 flex-center-center">
-              <div className="icon-box !text-primary !bg-transparent border !border-primary relative before:absolute before:w-full before:h-full before:rounded-full before:animate-ping before:bg-primary/60">
-                <BiPlay className="text-2xl" />
-              </div>
-              <h1 className="mt-3 text-3xl font-semibold text-white capitalize">
-                watch the overview
-              </h1>
-            </div>
-          </div>
-        </div>
+      <div className="text-center">
+        <h1 className="heading">Changing the Real Estate Game</h1>
+        <p className="mt-3">
+          Welcome to <strong>Hindsight Ventures Limited</strong>, your trusted partner in land development and management, based in Ukunda, Kwale County, Kenya. Established in February 2022, we are dedicated to transforming land into opportunities through innovation, integrity, and community enhancement.
+        </p>
+        <p className="mt-3">
+          Our mission is to bridge the gap between potential and reality in land investing, enabling individuals to achieve their dreams while providing investors with sustainable growth opportunities. We acquire, enhance, and develop land, ensuring every parcel becomes a source of pride and economic progress.
+        </p>
+        <button className="mt-4 btn btn-primary">Read More</button>
       </div>
     </div>
   );
