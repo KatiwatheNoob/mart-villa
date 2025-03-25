@@ -6,8 +6,8 @@ import Footer from "./components/common/Footer";
 import Navbar from "./components/common/Navbar";
 import { SearchProvider } from "./components/common/SearchContext";
 import {
-  AboutTwo,
-  PropertyThree,
+  About,
+  Property,
   Contact,
   PageNotFound,
   PropertyDetails,
@@ -47,8 +47,8 @@ function App() {
       <div className="min-h-screen pb-40" onClick={handleCloseDropdown}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about-2" element={<AboutTwo />} />
-          <Route path="/property-3" element={<PropertyThree />} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/property" element={<Property />} />
           <Route path="/property/:id" element={<PropertyDetails />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/home" element={<Home />} />

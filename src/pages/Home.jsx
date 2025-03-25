@@ -4,7 +4,6 @@ import {
   Services,
 } from "../components/common/page-componets";
 import {
-  Filters,
   Hero,
 } from "../components/home/home-1";
 

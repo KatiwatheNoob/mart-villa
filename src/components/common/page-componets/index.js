@@ -13,7 +13,6 @@ export { default as PropertyGridList } from "./PropertyGridList";
 export { default as Services } from "./Services";
 export { default as SocialIcons } from "./SocialIcons";
 export { default as Team } from "./Team";
-export { default as Testimonial } from "./Testimonial";
 export { default as TopRated } from "./TopRated";
 export { default as WhatWeDo } from "./WhatWeDo";
 export { default as AdvancedSearch } from "./property-filters/AdvancedSearch";

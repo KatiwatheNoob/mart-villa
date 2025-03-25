@@ -9,7 +9,7 @@ const OverView = () => {
         <p className="mt-3">
           Our mission is to bridge the gap between potential and reality in land investing, enabling individuals to achieve their dreams while providing investors with sustainable growth opportunities. We acquire, enhance, and develop land, ensuring every parcel becomes a source of pride and economic progress.
         </p>
-        <button className="mt-4 btn btn-primary">Read More</button>
+        
       </div>
     </div>
   );

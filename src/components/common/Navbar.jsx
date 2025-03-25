@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { FiDelete, FiMoon, FiSun } from "react-icons/fi";
 import { BiMenu, BiUser, BiBuildingHouse } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink  } from "react-router-dom";
 import SearchBar from "./SearchBar"; // Imported SearchBar component
 import {
   closeDropdown,
@@ -50,8 +50,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 flex-center-between">
         {/* Logo */}
         <Link to="/" className="flex-shrink-0 flex-align-center gap-x-1">
-          <BiBuildingHouse className="text-3xl text-primary" />
-          <h1 className="hidden md:block">Hindsight Ventures</h1>
+        <img
+          src="/images/icon.png.ico" 
+          alt="Hindsight Ventures Logo"
+          className="h-10 w-auto"
+        />
+        <h1 className="hidden md:block">Hindsight Ventures</h1>
         </Link>
 
         <div className="flex-align-center gap-x-4">

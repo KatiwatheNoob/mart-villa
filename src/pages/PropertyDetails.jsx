@@ -1,17 +1,18 @@
 import { useParams } from "react-router-dom";
 import { BiBed, BiMap, BiMapAlt, BiTab, BiPhone } from "react-icons/bi";
-import { property as properties} from "../data/dummyData"; // Mock data or API fetch
+import { property as properties } from "../data/dummyData"; // Mock data
 import { Link } from "react-router-dom";
 
 const PropertyDetails = () => {
   const { id } = useParams();
   console.log("Property ID from URL:", id); 
-  const selectedProperty = properties.find((item) => item.id === Number(id));
+
   if (!properties || properties.length === 0) {
     console.log("Properties data is empty or not loaded.");
     return <p>Loading properties...</p>;
   }
-  
+
+  const selectedProperty = properties.find((item) => item.id === id);
 
   if (!selectedProperty) return <p className="text-center text-xl">Property not found</p>;
 
@@ -19,14 +20,18 @@ const PropertyDetails = () => {
     <div className="container mx-auto px-5 py-10">
       {/* Images Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {selectedProperty.images.map((img, index) => (
-          <img
-            key={index}
-            src={img}
-            alt={selectedProperty.name}
-            className="w-full h-[300px] object-cover rounded-lg shadow-md"
-          />
-        ))}
+        {selectedProperty.images?.length > 0 ? (
+          selectedProperty.images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={selectedProperty.name}
+              className="w-full h-[300px] object-cover rounded-lg shadow-md"
+            />
+          ))
+        ) : (
+          <p>No images available</p>
+        )}
       </div>
 
       {/* Property Info & Contact */}
@@ -58,7 +63,7 @@ const PropertyDetails = () => {
 
           {/* Price */}
           <h2 className="text-2xl font-semibold text-primary mt-4">
-            ${selectedProperty.price}
+            Ksh {selectedProperty.price.toLocaleString()}
           </h2>
         </div>
 

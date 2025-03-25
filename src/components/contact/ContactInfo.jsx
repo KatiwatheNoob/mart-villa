@@ -1,52 +1,55 @@
-"use client";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { BiMap } from "react-icons/bi";
+import { FiMail, FiPhone } from "react-icons/fi";
 
-const containerVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
-  },
-};
+const ContactInfo = () => {
+  const [loading, setLoading] = useState(true);
 
-const Stats = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500); // Simulates data fetch delay
+  }, []);
+
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-      className="pt-10 pb-16"
-    >
-      {/* Header Section */}
-      <div className="text-center">
-        <h1 className="heading">
-          Unlocking Real Estate Potential in Kwale County
-        </h1>
-        <p className="mt-4">
-          At <strong>Hindsight Ventures Limited</strong>, we specialize in
-          transforming land into valuable opportunities. With a focus on
-          development, investment, and community enhancement, we are shaping the
-          future of real estate in this coastal region.
-        </p>
-      </div>
+    <div className="grid grid-cols-1 gap-6 py-16 sm:grid-cols-2 md:grid-cols-3">
+      {/* Contact Items */}
+      {[ 
+        { icon: <FiPhone />, title: "Phone Number", value: "010 2106218" },
+        { icon: <FiMail />, title: "Email Address", value: "Info@hindsight-ventures.com" },
+        { icon: <BiMap />, title: "Office Address", value: "Ukunda, Diani" }
+      ].map((item, index) => (
+        <div key={index} className="text-center">
+          {/* Icon Box */}
+          <div className="icon-box !h-14 !w-14 !bg-primary text-white mx-auto text-2xl flex items-center justify-center rounded-full">
+            {loading ? (
+              <div className="h-6 w-6 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></div>
+            ) : (
+              item.icon
+            )}
+          </div>
 
-      {/* Content Section */}
-      <div className="flex flex-wrap gap-24 mt-8">
-        <div className="flex-1 basis-[22rem]">
-          <p>
-            Our expertise spans land acquisition, enhancement, and sustainable
-            development. We believe in maximizing the value of every parcel of
-            land while fostering long-term growth.
-          </p>
-          <p className="mt-3">
-            We strive to create seamless investment experiences, ensuring our
-            clients receive tailored solutions that align with their goals.
+          {/* Title */}
+          <h1 className="mt-2 text-lg font-semibold">
+            {loading ? (
+              <div className="h-4 w-32 bg-gray-300 dark:bg-gray-700 animate-pulse mx-auto rounded-md"></div>
+            ) : (
+              item.title
+            )}
+          </h1>
+
+          {/* Contact Details */}
+          <p className="text-gray-700 dark:text-gray-300">
+            {loading ? (
+              <div className="h-4 w-24 bg-gray-300 dark:bg-gray-700 animate-pulse mx-auto rounded-md"></div>
+            ) : (
+              item.value
+            )}
           </p>
         </div>
-      </div>
-    </motion.div>
+      ))}
+    </div>
   );
 };
 
-export default Stats;
+export default ContactInfo;
