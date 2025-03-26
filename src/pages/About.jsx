@@ -1,5 +1,4 @@
 import { OverView, Stats } from "../components/about";
-import {  WhatWeDo } from "../components/common/page-componets";
 
 const AboutTwo = () => {
   return (
@@ -7,7 +6,6 @@ const AboutTwo = () => {
       <Stats />
       <OverView />
 
-      <WhatWeDo />
 
     </div>
   );

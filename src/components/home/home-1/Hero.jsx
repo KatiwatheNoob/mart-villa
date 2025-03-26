@@ -39,7 +39,7 @@ const Hero = () => {
   useEffect(() => {
     reset();
     return () => ref.current.forEach(clearTimeout);
-  }, []);
+  }, );
 
   useEffect(() => {
     setTimeout(() => {

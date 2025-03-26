@@ -1,503 +1,215 @@
-import {
-  BiBuildingHouse,
-  BiBuildings,
-  BiFullscreen,
-  BiHomeAlt,
-  BiMoney,
-  BiShieldAlt2,
-} from "react-icons/bi";
+
+import { TfiMoney } from "react-icons/tfi";
+import { FaRoad } from "react-icons/fa";
+import { GiStoneWall } from "react-icons/gi";
+import { GrSecure } from "react-icons/gr";
 import {
   FaBehance,
   FaDribbble,
   FaFacebook,
   FaInstagram,
   FaLinkedin,
-  FaPaintRoller,
   FaTwitter,
   FaVimeo,
   FaYoutube,
 } from "react-icons/fa";
-import { FiHeadphones } from "react-icons/fi";
 
-export const property = [
+
+
+export const properties = [
   {
     id: 1,
+    slug:"diani-airstrip-rd",
     name: "Diani Airstrip Rd",
     location: "Ukunda, Diani",
-    price: "450,000", 
-    distance: "1.2km",
-    purpose: "sale",
-    number_of_beds: 3,
-    number_of_bathrooms: 2,
+    price: "4,250,000", 
+    area: "1/4  ",
     contact: "010 2106218",
-    dimensions: "3000 sq ft",
     description:
       "Just 7-8 minutes from Diani Airstrip, this walled property offers 1/4 acre plots in a secure, gated community. Enjoy privacy, security, and easy access to shopping, dining, and the beach! Perfect for your dream home or a smart investment. Don't miss this chance to own land in a vibrant, well-connected location!",
-    image: "/images/New folder/Airstrip Rd/IMG-20240926-WA0021.jpg",
-  },
-  {
-    id: 2,
-    name: "Awesome family home",
-    location: "Oregon, Homeland Street, plot 345",
-    price: "450,000",
-    distance: "1.2km",
-    purpose: "sale",
-    number_of_beds: 3,
-    number_of_bathrooms: 2,
-    contact: "+256 775 358738",
-    dimensions: "3000 sq ft",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero beatae sit voluptas dolorum vel eligendi consectetur alias in veniam nostrum reiciendis cum labore fugiat ut ipsum quidem earum eaque voluptatem enim possimus, est, saepe explicabo. Reiciendis veritatis maiores dolore quidem doloremque obcaecati quis commodi dolorum. Corporis ad provident officia aut iusto ea, voluptatibus architecto debitis pariatur qui! Nisi esse voluptas veniam, quia provident rerum iure quis quasi, odio quos dolores obcaecati nam nostrum nesciunt ipsum similique recusandae? Neque, animi? Voluptates facere rerum labore eos nulla! Ut, nesciunt facere fugit optio quaerat neque id fuga necessitatibus, pariatur eius tenetur? Esse ipsa numquam distinctio vero reprehenderit, libero architecto itaque, optio quibusdam cupiditate cum, deleniti ad. Sapiente, placeat voluptates a recusandae voluptatum cupiditate nulla vel ut. Eveniet eum obcaecati illo saepe, recusandae natus incidunt quas molestias maxime vel? Possimus perspiciatis, repellat maxime molestias quos perferendis! Impedit consectetur natus alias laudantium sunt ipsam nostrum! Eius quasi officiis, labore sunt itaque porro laudantium, suscipit ipsa dicta magni quibusdam totam? Exercitationem doloribus, debitis, eligendi facere odio a nesciunt nam suscipit quia ullam sequi, illum repudiandae! Hic nobis inventore maxime. Explicabo quod inventore excepturi adipisci provident quidem ab doloremque amet nostrum, ullam fugiat debitis eius aspernatur atque.",
-    image: "/images/property (26).jpg",
-  },
-  {
-    id: 3,
-    name: "Agile real estate group",
-    location: "Oregon, Homeland Street, plot 345",
-    price: "450,000",
-    distance: "1.2km",
-    purpose: "rent",
-    number_of_beds: 3,
-    number_of_bathrooms: 2,
-    contact: "+256 775 358738",
-    dimensions: "3000 sq ft",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero beatae sit voluptas dolorum vel eligendi consectetur alias in veniam nostrum reiciendis cum labore fugiat ut ipsum quidem earum eaque voluptatem enim possimus, est, saepe explicabo. Reiciendis veritatis maiores dolore quidem doloremque obcaecati quis commodi dolorum. Corporis ad provident officia aut iusto ea, voluptatibus architecto debitis pariatur qui! Nisi esse voluptas veniam, quia provident rerum iure quis quasi, odio quos dolores obcaecati nam nostrum nesciunt ipsum similique recusandae? Neque, animi? Voluptates facere rerum labore eos nulla! Ut, nesciunt facere fugit optio quaerat neque id fuga necessitatibus, pariatur eius tenetur? Esse ipsa numquam distinctio vero reprehenderit, libero architecto itaque, optio quibusdam cupiditate cum, deleniti ad. Sapiente, placeat voluptates a recusandae voluptatum cupiditate nulla vel ut. Eveniet eum obcaecati illo saepe, recusandae natus incidunt quas molestias maxime vel? Possimus perspiciatis, repellat maxime molestias quos perferendis! Impedit consectetur natus alias laudantium sunt ipsam nostrum! Eius quasi officiis, labore sunt itaque porro laudantium, suscipit ipsa dicta magni quibusdam totam? Exercitationem doloribus, debitis, eligendi facere odio a nesciunt nam suscipit quia ullam sequi, illum repudiandae! Hic nobis inventore maxime. Explicabo quod inventore excepturi adipisci provident quidem ab doloremque amet nostrum, ullam fugiat debitis eius aspernatur atque.",
-    image: "/images/property (27).jpg",
-  },
-  {
-    id: 4,
-    name: "comfort property advisor",
-    location: "Oregon, Homeland Street, plot 345",
-    price: "450,000",
-    distance: "1.2km",
-    purpose: "sale",
-    number_of_beds: 3,
-    number_of_bathrooms: 2,
-    contact: "+256 775 358738",
-    dimensions: "3000 sq ft",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero beatae sit voluptas dolorum vel eligendi consectetur alias in veniam nostrum reiciendis cum labore fugiat ut ipsum quidem earum eaque voluptatem enim possimus, est, saepe explicabo. Reiciendis veritatis maiores dolore quidem doloremque obcaecati quis commodi dolorum. Corporis ad provident officia aut iusto ea, voluptatibus architecto debitis pariatur qui! Nisi esse voluptas veniam, quia provident rerum iure quis quasi, odio quos dolores obcaecati nam nostrum nesciunt ipsum similique recusandae? Neque, animi? Voluptates facere rerum labore eos nulla! Ut, nesciunt facere fugit optio quaerat neque id fuga necessitatibus, pariatur eius tenetur? Esse ipsa numquam distinctio vero reprehenderit, libero architecto itaque, optio quibusdam cupiditate cum, deleniti ad. Sapiente, placeat voluptates a recusandae voluptatum cupiditate nulla vel ut. Eveniet eum obcaecati illo saepe, recusandae natus incidunt quas molestias maxime vel? Possimus perspiciatis, repellat maxime molestias quos perferendis! Impedit consectetur natus alias laudantium sunt ipsam nostrum! Eius quasi officiis, labore sunt itaque porro laudantium, suscipit ipsa dicta magni quibusdam totam? Exercitationem doloribus, debitis, eligendi facere odio a nesciunt nam suscipit quia ullam sequi, illum repudiandae! Hic nobis inventore maxime. Explicabo quod inventore excepturi adipisci provident quidem ab doloremque amet nostrum, ullam fugiat debitis eius aspernatur atque.",
-    image: "/images/property (28).jpg",
-  },
-  {
-    id: 5,
-    name: "freedom properties, LLC",
-    location: "Oregon, Homeland Street, plot 345",
-    price: "450,000",
-    distance: "1.2km",
-    purpose: "rent",
-    number_of_beds: 3,
-    number_of_bathrooms: 2,
-    contact: "+256 775 358738",
-    dimensions: "3000 sq ft",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero beatae sit voluptas dolorum vel eligendi consectetur alias in veniam nostrum reiciendis cum labore fugiat ut ipsum quidem earum eaque voluptatem enim possimus, est, saepe explicabo. Reiciendis veritatis maiores dolore quidem doloremque obcaecati quis commodi dolorum. Corporis ad provident officia aut iusto ea, voluptatibus architecto debitis pariatur qui! Nisi esse voluptas veniam, quia provident rerum iure quis quasi, odio quos dolores obcaecati nam nostrum nesciunt ipsum similique recusandae? Neque, animi? Voluptates facere rerum labore eos nulla! Ut, nesciunt facere fugit optio quaerat neque id fuga necessitatibus, pariatur eius tenetur? Esse ipsa numquam distinctio vero reprehenderit, libero architecto itaque, optio quibusdam cupiditate cum, deleniti ad. Sapiente, placeat voluptates a recusandae voluptatum cupiditate nulla vel ut. Eveniet eum obcaecati illo saepe, recusandae natus incidunt quas molestias maxime vel? Possimus perspiciatis, repellat maxime molestias quos perferendis! Impedit consectetur natus alias laudantium sunt ipsam nostrum! Eius quasi officiis, labore sunt itaque porro laudantium, suscipit ipsa dicta magni quibusdam totam? Exercitationem doloribus, debitis, eligendi facere odio a nesciunt nam suscipit quia ullam sequi, illum repudiandae! Hic nobis inventore maxime. Explicabo quod inventore excepturi adipisci provident quidem ab doloremque amet nostrum, ullam fugiat debitis eius aspernatur atque.",
-    image: "/images/property (29).jpg",
-  },
-  
-  {
-    id: 1,
-    name: "Wabz Braize",
-    role: "Front-end developer",
-    image: "/images/avatar.png",
-    reviewText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis porro ex perferendis, nulla consectetur consequuntur odio qui adipisci harum earum dolor, eius accusantium quia praesentium.",
-  },
-  {
-    id: 2,
-    name: "Ethan Hunt",
-    role: "Backend engineer",
-    image: "/images/avatar-1.png",
-    reviewText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis porro ex perferendis, nulla consectetur consequuntur odio qui adipisci harum earum dolor, eius accusantium quia praesentium.",
-  },
-  {
-    id: 3,
-    name: "Raven Kent",
-    role: "UI Designer",
-    image: "/images/avatar-2.png",
-    reviewText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis porro ex perferendis, nulla consectetur consequuntur odio qui adipisci harum earum dolor, eius accusantium quia praesentium.",
-  },
-];
+    MainImage: 
+      "/images/New folder/Airstrip Rd/IMG-20240926-WA0021.jpg",
+    images:[
+      "/images/New folder/Airstrip Rd/IMG-20240926-WA0022.jpg",
+      "/images/New folder/Airstrip Rd/IMG-20240926-WA0023.jpg",
+      "/images/New folder/Airstrip Rd/IMG-20240926-WA0024.jpg",
+      "/images/New folder/Airstrip Rd/IMG-20240926-WA0024.jpg",
+      "/images/New folder/Airstrip Rd/IMG-20240926-WA0026.jpg",
 
-export const feeds = [
-  {
-    id: 1,
-    title: "Agency Is the capacity of an actor to act in a given..",
-    date_posted: "january 29, 2023",
-    image: "/images/blog/blog (1).jpg",
-    category: "architecture",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero beatae sit voluptas dolorum vel eligendi consectetur alias in veniam nostrum reiciendis cum labore fugiat ut ipsum quidem earum eaque voluptatem enim possimus, est, saepe explicabo. Reiciendis veritatis maiores dolore quidem doloremque obcaecati quis commodi dolorum. Corporis ad provident officia aut iusto ea, voluptatibus architecto debitis pariatur qui! Nisi esse voluptas veniam, quia provident rerum iure quis quasi, odio quos dolores obcaecati nam nostrum nesciunt ipsum similique recusandae? Neque, animi? Voluptates facere rerum labore eos nulla! Ut, nesciunt facere fugit optio quaerat neque id fuga necessitatibus, pariatur eius tenetur? Esse ipsa numquam distinctio vero reprehenderit, libero architecto itaque, optio quibusdam cupiditate cum, deleniti ad. Sapiente, placeat voluptates a recusandae voluptatum cupiditate nulla vel ut. Eveniet eum obcaecati illo saepe, recusandae natus incidunt quas molestias maxime vel? Possimus perspiciatis, repellat maxime molestias quos perferendis! Impedit consectetur natus alias laudantium sunt ipsam nostrum! Eius quasi officiis, labore sunt itaque porro laudantium, suscipit ipsa dicta magni quibusdam totam? Exercitationem doloribus, debitis, eligendi facere odio a nesciunt nam suscipit quia ullam sequi, illum repudiandae! Hic nobis inventore maxime. Explicabo quod inventore excepturi adipisci provident quidem ab doloremque amet nostrum, ullam fugiat debitis eius aspernatur atque.",
-    author: {
-      name: "Wabweni Brian",
-      avatar: "/images/avatar.png",
-    },
+    ],
+    highlights: [
+      "Selling Prime 1/4 Acre Plots",
+      "Gated community concept with boundary wall surrounding property",
+      "Fresh borehole water on site",
+      "Electricity ready for connection",
+      "Beach access and shopping malls within walking distance",
+      "Schools (CBC and International) within the neighborhood",
+      "Flexible payment plans available",
+      "40% Sold!",
+    ],
   },
+ 
   {
     id: 2,
-    title: "Agency Is the capacity of an actor to act in a given..",
-    date_posted: "january 29, 2023",
-    image: "/images/blog/blog (2).jpg",
-    category: "architecture",
+    slug:"behind-manyatta-club",
+    name: "Behind Manyatta Club",
+    location: "Ukunda, Diani",
+    price: "2,250,000", 
+    area: "1/8  ",
+    contact: "010 2106218",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero beatae sit voluptas dolorum vel eligendi consectetur alias in veniam nostrum reiciendis cum labore fugiat ut ipsum quidem earum eaque voluptatem enim possimus, est, saepe explicabo. Reiciendis veritatis maiores dolore quidem doloremque obcaecati quis commodi dolorum. Corporis ad provident officia aut iusto ea, voluptatibus architecto debitis pariatur qui! Nisi esse voluptas veniam, quia provident rerum iure quis quasi, odio quos dolores obcaecati nam nostrum nesciunt ipsum similique recusandae? Neque, animi? Voluptates facere rerum labore eos nulla! Ut, nesciunt facere fugit optio quaerat neque id fuga necessitatibus, pariatur eius tenetur? Esse ipsa numquam distinctio vero reprehenderit, libero architecto itaque, optio quibusdam cupiditate cum, deleniti ad. Sapiente, placeat voluptates a recusandae voluptatum cupiditate nulla vel ut. Eveniet eum obcaecati illo saepe, recusandae natus incidunt quas molestias maxime vel? Possimus perspiciatis, repellat maxime molestias quos perferendis! Impedit consectetur natus alias laudantium sunt ipsam nostrum! Eius quasi officiis, labore sunt itaque porro laudantium, suscipit ipsa dicta magni quibusdam totam? Exercitationem doloribus, debitis, eligendi facere odio a nesciunt nam suscipit quia ullam sequi, illum repudiandae! Hic nobis inventore maxime. Explicabo quod inventore excepturi adipisci provident quidem ab doloremque amet nostrum, ullam fugiat debitis eius aspernatur atque.",
-    author: {
-      name: "Wabweni Brian",
-      avatar: "/images/avatar.png",
-    },
-  },
-  {
-    id: 3,
-    title: "Agency Is the capacity of an actor to act in a given..",
-    date_posted: "january 29, 2023",
-    image: "/images/blog/blog (3).jpg",
-    category: "interior",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero beatae sit voluptas dolorum vel eligendi consectetur alias in veniam nostrum reiciendis cum labore fugiat ut ipsum quidem earum eaque voluptatem enim possimus, est, saepe explicabo. Reiciendis veritatis maiores dolore quidem doloremque obcaecati quis commodi dolorum. Corporis ad provident officia aut iusto ea, voluptatibus architecto debitis pariatur qui! Nisi esse voluptas veniam, quia provident rerum iure quis quasi, odio quos dolores obcaecati nam nostrum nesciunt ipsum similique recusandae? Neque, animi? Voluptates facere rerum labore eos nulla! Ut, nesciunt facere fugit optio quaerat neque id fuga necessitatibus, pariatur eius tenetur? Esse ipsa numquam distinctio vero reprehenderit, libero architecto itaque, optio quibusdam cupiditate cum, deleniti ad. Sapiente, placeat voluptates a recusandae voluptatum cupiditate nulla vel ut. Eveniet eum obcaecati illo saepe, recusandae natus incidunt quas molestias maxime vel? Possimus perspiciatis, repellat maxime molestias quos perferendis! Impedit consectetur natus alias laudantium sunt ipsam nostrum! Eius quasi officiis, labore sunt itaque porro laudantium, suscipit ipsa dicta magni quibusdam totam? Exercitationem doloribus, debitis, eligendi facere odio a nesciunt nam suscipit quia ullam sequi, illum repudiandae! Hic nobis inventore maxime. Explicabo quod inventore excepturi adipisci provident quidem ab doloremque amet nostrum, ullam fugiat debitis eius aspernatur atque.",
-    author: {
-      name: "Wabweni Brian",
-      avatar: "/images/avatar.png",
-    },
-  },
-  {
-    id: 4,
-    title: "Agency Is the capacity of an actor to act in a given..",
-    date_posted: "january 29, 2023",
-    image: "/images/blog/blog (4).jpg",
-    category: "architecture",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero beatae sit voluptas dolorum vel eligendi consectetur alias in veniam nostrum reiciendis cum labore fugiat ut ipsum quidem earum eaque voluptatem enim possimus, est, saepe explicabo. Reiciendis veritatis maiores dolore quidem doloremque obcaecati quis commodi dolorum. Corporis ad provident officia aut iusto ea, voluptatibus architecto debitis pariatur qui! Nisi esse voluptas veniam, quia provident rerum iure quis quasi, odio quos dolores obcaecati nam nostrum nesciunt ipsum similique recusandae? Neque, animi? Voluptates facere rerum labore eos nulla! Ut, nesciunt facere fugit optio quaerat neque id fuga necessitatibus, pariatur eius tenetur? Esse ipsa numquam distinctio vero reprehenderit, libero architecto itaque, optio quibusdam cupiditate cum, deleniti ad. Sapiente, placeat voluptates a recusandae voluptatum cupiditate nulla vel ut. Eveniet eum obcaecati illo saepe, recusandae natus incidunt quas molestias maxime vel? Possimus perspiciatis, repellat maxime molestias quos perferendis! Impedit consectetur natus alias laudantium sunt ipsam nostrum! Eius quasi officiis, labore sunt itaque porro laudantium, suscipit ipsa dicta magni quibusdam totam? Exercitationem doloribus, debitis, eligendi facere odio a nesciunt nam suscipit quia ullam sequi, illum repudiandae! Hic nobis inventore maxime. Explicabo quod inventore excepturi adipisci provident quidem ab doloremque amet nostrum, ullam fugiat debitis eius aspernatur atque.",
-    author: {
-      name: "Wabweni Brian",
-      avatar: "/images/avatar.png",
-    },
-  },
-  {
-    id: 5,
-    title: "Agency Is the capacity of an actor to act in a given..",
-    date_posted: "january 29, 2023",
-    image: "/images/blog/blog (5).jpg",
-    category: "interior",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero beatae sit voluptas dolorum vel eligendi consectetur alias in veniam nostrum reiciendis cum labore fugiat ut ipsum quidem earum eaque voluptatem enim possimus, est, saepe explicabo. Reiciendis veritatis maiores dolore quidem doloremque obcaecati quis commodi dolorum. Corporis ad provident officia aut iusto ea, voluptatibus architecto debitis pariatur qui! Nisi esse voluptas veniam, quia provident rerum iure quis quasi, odio quos dolores obcaecati nam nostrum nesciunt ipsum similique recusandae? Neque, animi? Voluptates facere rerum labore eos nulla! Ut, nesciunt facere fugit optio quaerat neque id fuga necessitatibus, pariatur eius tenetur? Esse ipsa numquam distinctio vero reprehenderit, libero architecto itaque, optio quibusdam cupiditate cum, deleniti ad. Sapiente, placeat voluptates a recusandae voluptatum cupiditate nulla vel ut. Eveniet eum obcaecati illo saepe, recusandae natus incidunt quas molestias maxime vel? Possimus perspiciatis, repellat maxime molestias quos perferendis! Impedit consectetur natus alias laudantium sunt ipsam nostrum! Eius quasi officiis, labore sunt itaque porro laudantium, suscipit ipsa dicta magni quibusdam totam? Exercitationem doloribus, debitis, eligendi facere odio a nesciunt nam suscipit quia ullam sequi, illum repudiandae! Hic nobis inventore maxime. Explicabo quod inventore excepturi adipisci provident quidem ab doloremque amet nostrum, ullam fugiat debitis eius aspernatur atque.",
-    author: {
-      name: "Wabweni Brian",
-      avatar: "/images/avatar.png",
-    },
-  },
-  {
-    id: 6,
-    title: "Agency Is the capacity of an actor to act in a given..",
-    date_posted: "january 29, 2023",
-    image: "/images/blog/blog (6).jpg",
-    category: "architecture",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero beatae sit voluptas dolorum vel eligendi consectetur alias in veniam nostrum reiciendis cum labore fugiat ut ipsum quidem earum eaque voluptatem enim possimus, est, saepe explicabo. Reiciendis veritatis maiores dolore quidem doloremque obcaecati quis commodi dolorum. Corporis ad provident officia aut iusto ea, voluptatibus architecto debitis pariatur qui! Nisi esse voluptas veniam, quia provident rerum iure quis quasi, odio quos dolores obcaecati nam nostrum nesciunt ipsum similique recusandae? Neque, animi? Voluptates facere rerum labore eos nulla! Ut, nesciunt facere fugit optio quaerat neque id fuga necessitatibus, pariatur eius tenetur? Esse ipsa numquam distinctio vero reprehenderit, libero architecto itaque, optio quibusdam cupiditate cum, deleniti ad. Sapiente, placeat voluptates a recusandae voluptatum cupiditate nulla vel ut. Eveniet eum obcaecati illo saepe, recusandae natus incidunt quas molestias maxime vel? Possimus perspiciatis, repellat maxime molestias quos perferendis! Impedit consectetur natus alias laudantium sunt ipsam nostrum! Eius quasi officiis, labore sunt itaque porro laudantium, suscipit ipsa dicta magni quibusdam totam? Exercitationem doloribus, debitis, eligendi facere odio a nesciunt nam suscipit quia ullam sequi, illum repudiandae! Hic nobis inventore maxime. Explicabo quod inventore excepturi adipisci provident quidem ab doloremque amet nostrum, ullam fugiat debitis eius aspernatur atque.",
-    author: {
-      name: "Wabweni Brian",
-      avatar: "/images/avatar.png",
-    },
-  },
-  {
-    id: 7,
-    title: "Agency Is the capacity of an actor to act in a given..",
-    date_posted: "january 29, 2023",
-    image: "/images/blog/blog (7).jpg",
-    category: "architecture",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero beatae sit voluptas dolorum vel eligendi consectetur alias in veniam nostrum reiciendis cum labore fugiat ut ipsum quidem earum eaque voluptatem enim possimus, est, saepe explicabo. Reiciendis veritatis maiores dolore quidem doloremque obcaecati quis commodi dolorum. Corporis ad provident officia aut iusto ea, voluptatibus architecto debitis pariatur qui! Nisi esse voluptas veniam, quia provident rerum iure quis quasi, odio quos dolores obcaecati nam nostrum nesciunt ipsum similique recusandae? Neque, animi? Voluptates facere rerum labore eos nulla! Ut, nesciunt facere fugit optio quaerat neque id fuga necessitatibus, pariatur eius tenetur? Esse ipsa numquam distinctio vero reprehenderit, libero architecto itaque, optio quibusdam cupiditate cum, deleniti ad. Sapiente, placeat voluptates a recusandae voluptatum cupiditate nulla vel ut. Eveniet eum obcaecati illo saepe, recusandae natus incidunt quas molestias maxime vel? Possimus perspiciatis, repellat maxime molestias quos perferendis! Impedit consectetur natus alias laudantium sunt ipsam nostrum! Eius quasi officiis, labore sunt itaque porro laudantium, suscipit ipsa dicta magni quibusdam totam? Exercitationem doloribus, debitis, eligendi facere odio a nesciunt nam suscipit quia ullam sequi, illum repudiandae! Hic nobis inventore maxime. Explicabo quod inventore excepturi adipisci provident quidem ab doloremque amet nostrum, ullam fugiat debitis eius aspernatur atque.",
-    author: {
-      name: "Wabweni Brian",
-      avatar: "/images/avatar.png",
-    },
-  },
-  {
-    id: 8,
-    title: "Agency Is the capacity of an actor to act in a given..",
-    date_posted: "january 29, 2023",
-    image: "/images/blog/blog (8).jpg",
-    category: "architecture",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero beatae sit voluptas dolorum vel eligendi consectetur alias in veniam nostrum reiciendis cum labore fugiat ut ipsum quidem earum eaque voluptatem enim possimus, est, saepe explicabo. Reiciendis veritatis maiores dolore quidem doloremque obcaecati quis commodi dolorum. Corporis ad provident officia aut iusto ea, voluptatibus architecto debitis pariatur qui! Nisi esse voluptas veniam, quia provident rerum iure quis quasi, odio quos dolores obcaecati nam nostrum nesciunt ipsum similique recusandae? Neque, animi? Voluptates facere rerum labore eos nulla! Ut, nesciunt facere fugit optio quaerat neque id fuga necessitatibus, pariatur eius tenetur? Esse ipsa numquam distinctio vero reprehenderit, libero architecto itaque, optio quibusdam cupiditate cum, deleniti ad. Sapiente, placeat voluptates a recusandae voluptatum cupiditate nulla vel ut. Eveniet eum obcaecati illo saepe, recusandae natus incidunt quas molestias maxime vel? Possimus perspiciatis, repellat maxime molestias quos perferendis! Impedit consectetur natus alias laudantium sunt ipsam nostrum! Eius quasi officiis, labore sunt itaque porro laudantium, suscipit ipsa dicta magni quibusdam totam? Exercitationem doloribus, debitis, eligendi facere odio a nesciunt nam suscipit quia ullam sequi, illum repudiandae! Hic nobis inventore maxime. Explicabo quod inventore excepturi adipisci provident quidem ab doloremque amet nostrum, ullam fugiat debitis eius aspernatur atque.",
-    author: {
-      name: "Wabweni Brian",
-      avatar: "/images/avatar.png",
-    },
-  },
-  {
-    id: 9,
-    title: "Agency Is the capacity of an actor to act in a given..",
-    date_posted: "january 29, 2023",
-    image: "/images/blog/blog (9).jpg",
-    category: "architecture",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero beatae sit voluptas dolorum vel eligendi consectetur alias in veniam nostrum reiciendis cum labore fugiat ut ipsum quidem earum eaque voluptatem enim possimus, est, saepe explicabo. Reiciendis veritatis maiores dolore quidem doloremque obcaecati quis commodi dolorum. Corporis ad provident officia aut iusto ea, voluptatibus architecto debitis pariatur qui! Nisi esse voluptas veniam, quia provident rerum iure quis quasi, odio quos dolores obcaecati nam nostrum nesciunt ipsum similique recusandae? Neque, animi? Voluptates facere rerum labore eos nulla! Ut, nesciunt facere fugit optio quaerat neque id fuga necessitatibus, pariatur eius tenetur? Esse ipsa numquam distinctio vero reprehenderit, libero architecto itaque, optio quibusdam cupiditate cum, deleniti ad. Sapiente, placeat voluptates a recusandae voluptatum cupiditate nulla vel ut. Eveniet eum obcaecati illo saepe, recusandae natus incidunt quas molestias maxime vel? Possimus perspiciatis, repellat maxime molestias quos perferendis! Impedit consectetur natus alias laudantium sunt ipsam nostrum! Eius quasi officiis, labore sunt itaque porro laudantium, suscipit ipsa dicta magni quibusdam totam? Exercitationem doloribus, debitis, eligendi facere odio a nesciunt nam suscipit quia ullam sequi, illum repudiandae! Hic nobis inventore maxime. Explicabo quod inventore excepturi adipisci provident quidem ab doloremque amet nostrum, ullam fugiat debitis eius aspernatur atque.",
-    author: {
-      name: "Wabweni Brian",
-      avatar: "/images/avatar.png",
-    },
-  },
-];
+      "Sitting pretty in the heart of Diani ,is this prime piece of property Located only 5 minutes to Diani Beach road, and only 15 minutes from Diani Airport. Selling from as small as 50x100 ft plots within a beaconed, fenced and gated compound. Great property for holiday homes and villas",
+    MainImage: 
+      "/images/New folder/ManyattaClub/IMG-20231206-WA0010.jpg",
+    images:[
+      "/images/New folder/ManyattaClub/IMG-20231206-WA0011.jpg",
+      "/images/New folder/ManyattaClub/IMG-20231206-WA0012.jpg",
+      "/images/New folder/ManyattaClub/IMG-20231206-WA0013.jpg",
+      "/images/New folder/ManyattaClub/IMG-20231206-WA0014.jpg",
+      "/images/New folder/ManyattaClub/IMG-20231206-WA0015.jpg",
 
-export const teamMembers = [
-  {
-    id: 1,
-    name: "Wabz Braize",
-    role: "Front-end developer",
-    image: "/images/avatar.png",
+    ],
+    highlights: [
+      "Selling Prime 1/8 Acre Plots",
+      "Boundary wall surrounding property",
+      "Fixed reference boundaries",
+     "Electricity ready for connection",
+      "Beach access and shopping malls within walking distance",
+      "Schools (CBC and International) within the neighborhood",
+      "Tailored payment plans",
+    ],
   },
-  {
-    id: 2,
-    name: "Ethan Hunt",
-    role: "Backend  engineer",
-    image: "/images/avatar-1.png",
-  },
+
   {
     id: 3,
-    name: "Raven Kent",
-    role: "UI Designer",
-    image: "/images/avatar-2.png",
+    slug:"diani-shopping-center",
+    name: "Diani Shopping Center",
+    location: "Ukunda, Diani",
+    price: "4,000,000", 
+    area: "1/4  ",
+    contact: "010 2106218",
+    description:
+      "Exquisite property with close proximity to the Chandarana Supermarket Easy access to Diani beach Road by exiting through the Mekaela School - Chandarana road Well fenced and beaconed, selling 50x100ft vacant lots from an expansive 5 acre gated complex",
+    MainImage: [
+      "/images/New folder/Dsc/7.jpg",],
+      images: [
+      "/images/New folder/Dsc/2.jpg",
+      "/images/New folder/Dsc/3.jpg",
+      "/images/New folder/Dsc/4.jpg",
+      "/images/New folder/Dsc/5.jpg",
+      "/images/New folder/Dsc/6.jpg",
+      "/images/New folder/Dsc/7.jpg",
+
+    ],
+    highlights: [
+      "Selling Prime 1/4 Acre Plots",
+      "Gated community concept with boundary wall surrounding property",
+      "Fresh borehole water on site",
+      "Electricity ready for connection",
+      "Beach access and shopping malls within walking distance",
+      "Schools (CBC and International) within the neighborhood",
+      "Flexible payment plans available",
+      "60% Sold!",
+    ],
   },
+
   {
     id: 4,
-    name: "John Doe",
-    role: "Web developer",
-    image: "/images/avatar-3.png",
+    slug:"ukunda-off-tum-university-way",
+    name: "Ukunda, Off TUM University Way",
+    location: "Ukunda, Diani",
+    price: "4,250,000", 
+    area: "1/4  ",
+    contact: "010 2106218",
+    description:
+      "Prime land for Holiday homes. Very close proximity to Diani International Airport being 7min drive.",
+    MainImage: 
+      "/images/New folder/UkundaOffTumUniversityWay/IMG-20231214-WA0038.jpg",
+    images: [
+      "/images/New folder/UkundaOffTumUniversityWay/IMG-20231214-WA0039.jpg",
+      "/images/New folder/UkundaOffTumUniversityWay/IMG-20231214-WA0040.jpg",
+      "/images/New folder/UkundaOffTumUniversityWay/IMG-20231214-WA0041.jpg",
+      "/images/New folder/UkundaOffTumUniversityWay/IMG-20231214-WA0042.jpg",
+      "/images/New folder/UkundaOffTumUniversityWay/IMG-20231214-WA0043.jpg",
+      "/images/New folder/UkundaOffTumUniversityWay/IMG-20231214-WA0044.jpg",
+
+    ],
+    highlights: [
+      "Selling Prime 1/4 Acre Plots",
+      "Boundary wall surrounding property",
+      "Electricity ready for connection",
+      "Fixed reference boundaries",
+      "Electricity ready for connection",
+      "Beach access and shopping malls within walking distance",
+      "Schools (CBC and International) within the neighborhood",
+      "Tailored payment plans",
+    ],
   },
   {
     id: 5,
-    name: "John Doe",
-    role: "Web developer",
-    image: "/images/avatar-3.png",
+    slug: "tum-university-business-center",
+    name: "TUM university Business Center, Mabokoni Area",
+    location: "Ukunda, Diani",
+    price: "1,500,000", 
+    area: "1/4  ",
+    contact: "010 2106218",
+    description:
+      "Located along the Mabokoni to Ukunda-LungaLunga Highway touching the tarmac, a meticulously gated property to ensure your peace of mind. Close proximity to Mabokoni Shopping Centre and the Technical University of Mombasa. Serene nature filled environment with trees across the expanse of the property. Views of the entire Mabokoni area and the Indian Ocean distantly. 30Mins drive to the Dogo Kundu Bypass",
+    MainImage: [
+      "/images/New folder/Mabokoni Business Area/IMG-20231215-WA0068.jpg",
+    ],
+    images: [
+      "/images/New folder/Mabokoni Business Area/IMG-20231215-WA0075.jpg",
+      "/images/New folder/Mabokoni Business Area/IMG-20231215-WA0076.jpg",
+      "/images/New folder/Mabokoni Business Area/IMG-20231215-WA0072.jpg",
+      "/images/New folder/Mabokoni Business Area/IMG-20231215-WA0073.jpg",
+      "/images/New folder/Mabokoni Business Area/IMG-20231215-WA0074.jpg",
+      "/images/New folder/Mabokoni Business Area/IMG-20231215-WA0075.jpg",
+    ],
+    highlights: [
+      "Selling Prime 1/4 Acre Plots",
+      "Boundary wall surrounding property",
+      "Electricity ready for connection",
+      "Fixed reference boundaries",
+      "Electricity ready for connection",
+      "Schools (CBC and International) within the neighborhood",
+      "Tailored payment plans",
+    ],
   },
-  {
-    id: 6,
-    name: "Raven Kent",
-    role: "UI Designer",
-    image: "/images/avatar-2.png",
-  },
-  {
-    id: 7,
-    name: "Ethan Hunt",
-    role: "Backend  engineer",
-    image: "/images/avatar-1.png",
-  },
-  {
-    id: 8,
-    name: "Wabz Braize",
-    role: "Front-end developer",
-    image: "/images/avatar.png",
-  },
-];
+]
+
+ 
+
 
 export const services = [
   {
     id: 1,
-    name: "luxury apartment",
-    icon: <BiBuildingHouse />,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
+    name: "Unrivaled Prices",
+    icon: <TfiMoney  />,
+    text: "Get the best deals on prime properties with unmatched affordability.",
   },
   {
     id: 2,
-    name: "architectural design",
-    icon: <BiFullscreen />,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
+    name: "Perimeter Wall",
+    icon: <GiStoneWall   />,
+    text: "Enjoy peace of mind with well-constructed boundary walls ensuring safety and privacy..",
   },
   {
     id: 3,
-    name: "extra security",
-    icon: <BiShieldAlt2 />,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
+    name: "Proximity to Amenities ",
+    icon: <FaRoad  />,
+    text: "Close to essential amenities like schools, hospitals, and shopping centers..",
   },
+ 
+ 
   {
     id: 4,
-    name: "Home remodelling",
-    icon: <BiHomeAlt />,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
-  },
-  {
-    id: 5,
-    name: "office renovation",
-    icon: <FaPaintRoller />,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
-  },
-  {
-    id: 6,
-    name: "24/7 support",
-    icon: <FiHeadphones />,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
+    name: "Trusted Partner",
+    icon: <GrSecure  />,
+    text: "With years of experience, we provide expert guidance and seamless property transactions.",
   },
 ];
 
-export const projects = [
-  {
-    id: 1,
-    name: "Apartment",
-    number: 20,
-    image: "/images/property (17).jpg",
-  },
-  {
-    id: 2,
-    name: "Office",
-    number: 23,
-    image: "/images/property (1).jpeg",
-  },
-  {
-    id: 3,
-    name: "Townhouse",
-    number: 36,
-    image: "/images/property (21).jpg",
-  },
-  {
-    id: 4,
-    name: "living room",
-    number: 12,
-    image: "/images/property (1).jpg",
-  },
-  {
-    id: 5,
-    name: "Real estate",
-    number: 36,
-    image: "/images/property (20).jpg",
-  },
-  {
-    id: 6,
-    name: "luxury apartment",
-    number: 14,
-    image: "/images/property (18).jpg",
-  },
-];
-
-export const brands = [
-  "/images/brands/airbnb.png",
-  "/images/brands/cisco.png",
-  "/images/brands/ebay.png",
-  "/images/brands/microsoft.png",
-  "/images/brands/uber.png",
-];
-
-export const focus = [
-  {
-    id: 1,
-    name: "Buy a New Home",
-    icon: <BiHomeAlt />,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
-  },
-  {
-    id: 2,
-    name: "Sell a Home",
-    icon: <BiMoney />,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
-  },
-  {
-    id: 4,
-    name: "Rent a Home",
-    icon: <BiBuildings />,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
-  },
-];
-
-export const categories = [
-  {
-    id: 1,
-    name: "Apartments",
-    number: 20,
-    image: "/images/property (17).jpg",
-  },
-  {
-    id: 2,
-    name: "Offices",
-    number: 23,
-    image: "/images/property (1).jpeg",
-  },
-  {
-    id: 3,
-    name: "Townhouse",
-    number: 36,
-    image: "/images/property (21).jpg",
-  },
-  {
-    id: 4,
-    name: "living room",
-    number: 12,
-    image: "/images/property (1).jpg",
-  },
-  {
-    id: 5,
-    name: "Real estates",
-    number: 36,
-    image: "/images/property (20).jpg",
-  },
-  {
-    id: 6,
-    name: "Condors",
-    number: 14,
-    image: "/images/property (18).jpg",
-  },
-];
-
-export const propertyTypes = [
-  {
-    id: 1,
-    name: "apartment",
-    number: 20,
-  },
-  {
-    id: 2,
-    name: "house",
-    number: 32,
-  },
-  {
-    id: 3,
-    name: "industrial",
-    number: 25,
-  },
-  {
-    id: 4,
-    name: "office villa",
-    number: 62,
-  },
-  {
-    id: 5,
-    name: "luxury home",
-    number: 22,
-  },
-  {
-    id: 6,
-    name: "land",
-    number: 15,
-  },
-  {
-    id: 7,
-    name: "rental",
-    number: 10,
-  },
-  {
-    id: 8,
-    name: "studio",
-    number: 17,
-  },
-];
-export const priceRanges = [
-  {
-    id: 1,
-    name: "low Budget",
-    range: "$100k - 300k",
-  },
-  {
-    id: 2,
-    name: "medium budget",
-    range: "300k - 500k",
-  },
-  {
-    id: 3,
-    name: "high budget",
-    range: "500k - 1M",
-  },
-];
 
 export const socials = [
   <FaFacebook />,
@@ -510,82 +222,3 @@ export const socials = [
   <FaVimeo />,
 ];
 
-export const ratings = [
-  {
-    id: 1,
-    image: "/images/property (14).jpg",
-    rating: 4.3,
-    name: "Luxury mansion in Oregon",
-    price: "450, 000",
-  },
-  {
-    id: 2,
-    image: "/images/property (26).jpg",
-    rating: 4.3,
-    name: "Luxury mansion in Oregon",
-    price: "450, 000",
-  },
-  {
-    id: 3,
-    image: "/images/property (16).jpg",
-    rating: 4.3,
-    name: "Luxury mansion in Oregon",
-    price: "450, 000",
-  },
-  {
-    id: 4,
-    image: "/images/property (18).jpg",
-    rating: 4.3,
-    name: "Luxury mansion in Oregon",
-    price: "450, 000",
-  },
-];
-
-export const tags = [
-  "Popular",
-  "Luxury Villa",
-  "Apartment",
-  "Interior Design",
-  "Architect",
-  "Condor",
-  "Home",
-];
-
-export const faqs = [
-  {
-    id: 1,
-    question: "How can we help?",
-    response:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi, molestias ipsam dolorum laudantium corrupti optio cupiditate libero odit cum, labore ab sint officiis reiciendis quisquam perferendis, facilis facere iste inventore architecto blanditiis suscipit. Voluptatibus.",
-  },
-  {
-    id: 2,
-    question: "How can I make refund from your website?",
-    response:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi, molestias ipsam dolorum laudantium corrupti optio cupiditate libero odit cum, labore ab sint officiis reiciendis quisquam perferendis, facilis facere iste inventore architecto blanditiis suscipit. Voluptatibus.",
-  },
-  {
-    id: 3,
-    question: "Do you store any of my information?",
-    response:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi, molestias ipsam dolorum laudantium corrupti optio cupiditate libero odit cum, labore ab sint officiis reiciendis quisquam perferendis, facilis facere iste inventore architecto blanditiis suscipit. Voluptatibus.",
-  },
-  {
-    id: 4,
-    question: "Should I talk to the bank before booking a home?",
-    response:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi, molestias ipsam dolorum laudantium corrupti optio cupiditate libero odit cum, labore ab sint officiis reiciendis quisquam perferendis, facilis facere iste inventore architecto blanditiis suscipit. Voluptatibus.",
-  },
-  {
-    id: 5,
-    question: "How do i make payments using my credit card?",
-    response:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi, molestias ipsam dolorum laudantium corrupti optio cupiditate libero odit cum, labore ab sint officiis reiciendis quisquam perferendis, facilis facere iste inventore architecto blanditiis suscipit. Voluptatibus.",
-  },
-  {
-    id: 6,
-    question: "How do i link multiple accounts with my phone?",
-    response:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi, molestias ipsam dolorum laudantium corrupti optio cupiditate libero odit cum, labore ab sint officiis reiciendis quisquam perferendis, facilis facere iste inventore architecto blanditiis suscipit. Voluptatibus.",
-  },
-];

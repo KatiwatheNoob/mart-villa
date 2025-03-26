@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { property } from "../../data/dummyData";  
+import { properties } from "../../data/dummyData";  
 
 const SearchContext = createContext();
 
@@ -17,7 +17,7 @@ export const SearchProvider = ({ children }) => {
     }
 
     // Filter properties based on search term (case insensitive)
-    const results = property.filter((item) =>
+    const results = properties.filter((item) =>
       item.name.toLowerCase().includes(query.toLowerCase()) ||
       item.location.toLowerCase().includes(query.toLowerCase()) ||
       item.description.toLowerCase().includes(query.toLowerCase())

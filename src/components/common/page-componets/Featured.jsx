@@ -1,4 +1,4 @@
-import { property } from "../../../data/dummyData";
+import { properties } from "../../../data/dummyData";
 import SingleProductCard from "./SingleProductCard";
 
 const Featured = () => {
@@ -9,7 +9,7 @@ const Featured = () => {
         <h1 className="heading">explore featured  properties</h1>
       </div>
       <div className="flex flex-wrap gap-4 mt-8">
-        {property.slice(0, 3).map((featured) => (
+        {properties.slice(0, 3).map((featured) => (
           <SingleProductCard key={featured.id} {...featured} />
         ))}
       </div>

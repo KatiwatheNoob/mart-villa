@@ -10,8 +10,8 @@ import {
   Property,
   Contact,
   PageNotFound,
-  PropertyDetails,
   Home,
+  PropertySingle,
 } from "./pages";
 import { closeDropdown } from "./features/uiSlice";
 import Dropdown from "./components/common/DropDown";
@@ -49,7 +49,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About/>} />
           <Route path="/property" element={<Property />} />
-          <Route path="/property/:id" element={<PropertyDetails />} />
+          <Route path="/property/:slug" element={<PropertySingle />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/home" element={<Home />} />
           <Route path="*" element={<PageNotFound />} />

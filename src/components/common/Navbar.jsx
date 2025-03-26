@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
 import { FiDelete, FiMoon, FiSun } from "react-icons/fi";
-import { BiMenu, BiUser, BiBuildingHouse } from "react-icons/bi";
+import { BiMenu, BiUser } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink  } from "react-router-dom";
 import SearchBar from "./SearchBar"; // Imported SearchBar component

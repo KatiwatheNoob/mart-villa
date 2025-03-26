@@ -6,14 +6,15 @@
 
   const SingleProductCardFullWidth = ({
     name,
+    slug,
     location,
     price,
-    image,
+    MainImage,
     description,
     textLength,
     showLabels,
+    area,
     purpose,
-    distance,
   }) => {
     const [loading, setLoading] = useState(true);
 
@@ -32,25 +33,26 @@
             {loading ? (
               <div className="w-full h-full bg-gray-300 dark:bg-gray-700 animate-pulse rounded-lg" />
             ) : (
-              <Link to="/" className="!opacity-100">
+              <Link to={`/property/${name.replace(/\s+/g, "-").toLowerCase()}`}className="!opacity-100">
                 <img
-                  src={image}
+                  src={MainImage} //displays the main image
                   alt={name}
                   className="object-cover w-full h-full group-hover:scale-110 transition-all duration-300"
                 />
               </Link>
-            )}
+                  )}
             {!loading && <CardHoverIcons />}
-          </div>
-          {!showLabels && !loading && <CardLabels purpose={purpose} distance={distance} />}
-        </div>
+      </div>
+      {!showLabels && !loading && <CardLabels  distance={`${area} acres`} />}
+    </div>
+
 
         {/* Content Section */}
         <div className="sm:col-span-1 md:col-span-2 p-6">
           {loading ? (
             <div className="w-3/4 h-6 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md" />
           ) : (
-            <Link to="/" className="group-hover:text-primary transition-all">
+            <Link to={`/property/${name.replace(/\s+/g, "-").toLowerCase()}`} className="group-hover:text-primary transition-all">
               <h1 className="text-xl font-bold capitalize">{name}</h1>
             </Link>
           )}
@@ -68,22 +70,23 @@
             <div className="mt-2 h-12 w-full bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md" />
           ) : (
             <p className="mt-2 text-gray-600 dark:text-gray-400">
-              {`${description.slice(0, textLength || 250)}...`}
-            </p>
+            {description ? `${description.slice(0, textLength || 250)}...` : "No description available"}
+          </p>
+                      
           )}
 
           {/* Price and Button */}
           <div className="mt-5 flex justify-between items-center">
-            {loading ? (
-              <div className="w-20 h-6 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md" />
-            ) : (
-              <h1 className="text-xl font-semibold text-primary">Ksh {price}</h1>
-            )}
+              {loading ? (
+                <div className="w-20 h-6 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md" />
+              ) : (
+                <h1 className="text-xl font-semibold text-primary">Ksh {price}</h1>
+              )}
 
             {loading ? (
               <div className="w-24 h-10 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md" />
             ) : (
-              <Link to={`/property/${name.replace(/\s+/g, "-").toLowerCase()}`} className="btn btn-secondary px-5 py-2 text-lg">
+              <Link to={`/property/${name.replace(/\s+/g, "-").toLowerCase()}`}className="btn btn-secondary px-5 py-2 text-lg">
                 Details
               </Link>
             )}

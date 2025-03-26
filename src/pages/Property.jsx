@@ -2,13 +2,13 @@ import {
   Pagination,
   PropertyFullWidth,
 } from "../components/common/page-componets";
-import { property } from "../data/dummyData";
+import { properties } from "../data/dummyData";
 
 const PropertyThree = () => {
   return (
     <div className="pt-20 max-w-7xl mx-auto px-4">
       <PropertyFullWidth />
-      <Pagination itemsPerPage={6} pageData={property} />
+      <Pagination itemsPerPage={6} pageData={properties} />
     </div>
   );
 };
