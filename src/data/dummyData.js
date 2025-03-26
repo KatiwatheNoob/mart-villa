@@ -33,8 +33,10 @@ export const properties = [
       "/images/New folder/Airstrip Rd/IMG-20240926-WA0022.jpg",
       "/images/New folder/Airstrip Rd/IMG-20240926-WA0023.jpg",
       "/images/New folder/Airstrip Rd/IMG-20240926-WA0024.jpg",
-      "/images/New folder/Airstrip Rd/IMG-20240926-WA0024.jpg",
+      "/images/New folder/Airstrip Rd/IMG-20240926-WA0029.jpg",
       "/images/New folder/Airstrip Rd/IMG-20240926-WA0026.jpg",
+      "/images/New folder/Airstrip Rd/IMG-20240926-WA0025.jpg",
+
 
     ],
     highlights: [
@@ -63,10 +65,11 @@ export const properties = [
       "/images/New folder/ManyattaClub/IMG-20231206-WA0010.jpg",
     images:[
       "/images/New folder/ManyattaClub/IMG-20231206-WA0011.jpg",
-      "/images/New folder/ManyattaClub/IMG-20231206-WA0012.jpg",
-      "/images/New folder/ManyattaClub/IMG-20231206-WA0013.jpg",
+      "/images/New folder/ManyattaClub/IMG-20231206-WA0004.jpg",
+      "/images/New folder/ManyattaClub/IMG-20231206-WA0009.jpg",
       "/images/New folder/ManyattaClub/IMG-20231206-WA0014.jpg",
       "/images/New folder/ManyattaClub/IMG-20231206-WA0015.jpg",
+
 
     ],
     highlights: [
@@ -97,8 +100,8 @@ export const properties = [
       "/images/New folder/Dsc/3.jpg",
       "/images/New folder/Dsc/4.jpg",
       "/images/New folder/Dsc/5.jpg",
-      "/images/New folder/Dsc/6.jpg",
       "/images/New folder/Dsc/7.jpg",
+      "/images/New folder/Dsc/8.jpg",
 
     ],
     highlights: [
@@ -116,7 +119,7 @@ export const properties = [
   {
     id: 4,
     slug:"ukunda-off-tum-university-way",
-    name: "Ukunda, Off TUM University Way",
+    name: "Ukunda Off TUM University Way",
     location: "Ukunda, Diani",
     price: "4,250,000", 
     area: "1/4  ",
@@ -145,23 +148,24 @@ export const properties = [
       "Tailored payment plans",
     ],
   },
+
   {
     id: 5,
-    slug: "tum-university-business-center",
-    name: "TUM university Business Center, Mabokoni Area",
+    slug: "tum-university-business-center-mabokoni-area",
+    name: "TUM university Business Center Mabokoni Area",
     location: "Ukunda, Diani",
     price: "1,500,000", 
     area: "1/4  ",
     contact: "010 2106218",
     description:
       "Located along the Mabokoni to Ukunda-LungaLunga Highway touching the tarmac, a meticulously gated property to ensure your peace of mind. Close proximity to Mabokoni Shopping Centre and the Technical University of Mombasa. Serene nature filled environment with trees across the expanse of the property. Views of the entire Mabokoni area and the Indian Ocean distantly. 30Mins drive to the Dogo Kundu Bypass",
-    MainImage: [
+    MainImage: 
       "/images/New folder/Mabokoni Business Area/IMG-20231215-WA0068.jpg",
-    ],
+    
     images: [
       "/images/New folder/Mabokoni Business Area/IMG-20231215-WA0075.jpg",
       "/images/New folder/Mabokoni Business Area/IMG-20231215-WA0076.jpg",
-      "/images/New folder/Mabokoni Business Area/IMG-20231215-WA0072.jpg",
+      "/images/New folder/Mabokoni Business Area/IMG-20231215-WA0068.jpg",
       "/images/New folder/Mabokoni Business Area/IMG-20231215-WA0073.jpg",
       "/images/New folder/Mabokoni Business Area/IMG-20231215-WA0074.jpg",
       "/images/New folder/Mabokoni Business Area/IMG-20231215-WA0075.jpg",
