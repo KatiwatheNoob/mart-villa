@@ -22,7 +22,7 @@ export const properties = [
     slug:"diani-airstrip-rd",
     name: "Diani Airstrip Rd",
     location: "Ukunda, Diani",
-    price: "4,250,000", 
+    price: "2,200,000", 
     area: "1/4  ",
     contact: "010 2106218",
     description:
@@ -56,7 +56,7 @@ export const properties = [
     slug:"behind-manyatta-club",
     name: "Behind Manyatta Club",
     location: "Ukunda, Diani",
-    price: "2,250,000", 
+    price: "2,000,000", 
     area: "1/8  ",
     contact: "010 2106218",
     description:
@@ -85,7 +85,7 @@ export const properties = [
 
   {
     id: 3,
-    slug:"diani-shopping-center",
+    slug:"Diani Shopping Center",
     name: "Diani Shopping Center",
     location: "Ukunda, Diani",
     price: "4,000,000", 
@@ -105,10 +105,8 @@ export const properties = [
 
     ],
     highlights: [
-      "Selling Prime 1/4 Acre Plots",
+      "Selling Prime  1/4 Acre Plots",
       "Gated community concept with boundary wall surrounding property",
-      "Fresh borehole water on site",
-      "Electricity ready for connection",
       "Beach access and shopping malls within walking distance",
       "Schools (CBC and International) within the neighborhood",
       "Flexible payment plans available",
